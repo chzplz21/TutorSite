@@ -1,0 +1,288 @@
+body {
+	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+}
+
+
+.navbar {
+	
+	height: 100px;
+	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+  
+}
+
+
+.container-fluid {
+	height: auto;
+	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+}
+
+
+body {
+	margin: 0;
+}
+
+
+
+/*other text at the top of the screen */
+.top-text {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  margin-right: 7%;
+  margin-top: 0;
+  font-size: 15px;
+  
+  	
+}
+
+/*first top link */
+#first {
+	margin-left: 50px;
+}
+
+#last {
+	margin-right: 0;
+}
+
+/*hidden title*/
+#title-hidden-container {
+	display: none;
+}
+
+/*box containing page title*/
+#title {
+	font-size: 35px;
+	word-wrap: break-word;
+}
+
+#blue {
+	color: blue;
+}
+
+/*Your broward county tutor*/
+.Broward {
+	font-size: 3vw;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;    
+	color: white;
+	text-align: center;
+	padding-top: 15%;
+}
+
+
+
+/*big box on left side */
+#BigBoxLeft {
+	height: 62vw;
+	background-color: green;
+	margin-left: 50px;
+	float: left;
+	 background-image: url("studying3.jpg");
+	 background-size: cover;
+	   flex-grow: 1;
+  transition: all 400ms ease;
+	 	 
+}
+
+/*class used on BigBoxLeft for toggling height, makes it smaller */
+#BigBoxLeft.contracted {
+	height: 200px;
+}
+
+#BigBoxRightContainer{
+ 	/*height: 800px;*/
+	height: 62vw;
+
+}
+
+.SmallBoxRight {
+	/*height: 385px;*/
+	height: 30vw;
+	background-color: red;
+	vertical-align: top;
+	margin: 0 auto 2vw;
+	
+}
+
+/*text in small box right */
+.text {
+	
+	font-size: 3vw;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+    
+	color: white;
+	text-align: center;
+	padding-top: 35%;
+	
+}
+
+
+#pierPic {
+	 background-image: url("pierpic.jpg");
+	 background-size: cover;
+	 	
+}
+
+@media only screen and (max-width: 1200px) {
+	/*other text at the top of the screen */
+	.top-text {
+		margin-right: 5%;
+	
+	}
+	
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 1100px) {
+	/*other text at the top of the screen */
+	.top-text {
+		margin-right: 2%;
+	
+	}
+	
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 1000px) {
+	#title {
+		font-size: 27px;
+		
+		
+	}
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 950px) {
+	
+	/*hidden title*/
+	#title-hidden-container {
+		display: block;
+		height: auto;
+		width: 400px;
+		
+		margin: 0 auto;
+		text-align: center;
+		font-size: 25px;
+	}
+	
+	#title-hidden {
+		margin: 0 auto;
+		height: auto;
+		width: 300px;
+		
+	}
+
+	
+	/*box containing page title*/
+	#title {
+		display: none;
+			
+	}
+	
+	#nav-links-container {
+		width: 80%;
+		height: auto; 
+		margin: 0 auto;
+		border: solid green;
+		
+	}
+	
+	
+	/*other text at the top of the screen */
+	.top-text {
+		margin-right: 10%;
+		margin-top: 0;
+		
+	}
+	
+	/*first top link */
+	#first {
+	   margin-left: 20%;
+	}
+	
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 700px) {
+	.container-fluid {
+		height: auto;
+		font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+	}
+	
+	/*hidden title*/
+	#title-hidden-container {
+		width: 100%;
+		word-wrap: break-word;
+		line-height: 80%;
+	}
+	
+	/*other text at the top of the screen */
+	.top-text {
+		display: block; 
+		margin: 0 auto;
+		text-align: center;
+		margin-right: 0;
+	}
+	
+	/*first top link */
+	#first {
+	   margin-left: 0;
+	}
+	
+	
+	/*Your broward county tutor*/
+	#Broward {
+		font-size: 20px;
+		margin-top: 40%;
+		
+	
+	}
+
+}
+
+
+@media only screen and (max-width: 610px) {
+	#BigBoxLeft {
+		margin-left: 7%;
+		margin-right: 7%;
+		float: none;
+		height:400px;
+		
+		
+	}
+	
+	
+	.SmallBoxRight {
+		margin-top: 20px; 
+		height: 400px;
+		
+	}
+	
+	
+}
+
+
+@media only screen and (max-width: 550px) {
+	
+	#title {
+		font-size: 20px;
+		
+		
+	}
+	
+}
