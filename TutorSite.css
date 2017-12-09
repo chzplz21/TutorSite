@@ -1,19 +1,32 @@
 body {
 	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+	position: relative;
 }
 
+body a{
+	color: white;
+}
 
 .navbar {
-	
 	height: 100px;
 	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
   
 }
 
 
-.container-fluid {
-	height: auto;
+.topBar {
+	height: 60px;
 	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+	animation: fadeIt 5s;
+	-webkit-animation: fadeIt 5s;
+	-moz-animation:  fadeIt 5s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+	position: relative;
+	
+	
+
+	
 }
 
 
@@ -23,26 +36,30 @@ body {
 
 
 
+
 /*other text at the top of the screen */
+/*
 .top-text {
-  display: inline-block;
+	
+  display: inline;
   height: auto;
   width: auto;
-  margin-right: 7%;
+ 
   margin-top: 0;
   font-size: 15px;
-  
-  	
+    	
 }
+*/
 
 /*first top link */
-#first {
-	margin-left: 50px;
-}
+	#first {
+	   position: absolute;
+	   width: 200px;
+	  
+	   left: 140px;
+	   top: 15px;
+	}
 
-#last {
-	margin-right: 0;
-}
 
 /*hidden title*/
 #title-hidden-container {
@@ -52,12 +69,49 @@ body {
 /*box containing page title*/
 #title {
 	font-size: 35px;
+	/*
 	word-wrap: break-word;
+	*/
+	position: absolute;
+	width: 450px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	
+}
+
+/*link for email address */
+#last {
+	position: absolute;
+	right: 6%;
+	top: 15px;
 }
 
 #blue {
 	color: blue;
 }
+
+/*container for menu bar */
+#menuBarContainer {
+	overflow: hidden;
+	display: none;
+}
+
+/*3 bar menu thing */
+.menuBar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+
+
+/*to show menu bar dropdown
+.show {
+	display:block;
+	}
+
 
 /*Your broward county tutor*/
 .Broward {
@@ -68,22 +122,146 @@ body {
 	color: white;
 	text-align: center;
 	padding-top: 15%;
+	cursor: pointer;
+
+	}
+	
+.Broward:hover { 
+	color: #FFDC00;
+
+}	
+	
+	
+	
+.fadeIn {
+	animation: fadeIt 4s;
+	-webkit-animation: fadeIt 5s;
+	-moz-animation:  fadeIt 5s;
+	visibility: hidden;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
 }
+
+
+/* Animation for "your broward county tutor"*/
+@keyframes fadeIt {
+  0%   { opacity: 0;
+         visibility: visible;
+        }
+
+  100% { opacity: 1;
+         visibility: visible;
+  }
+}
+
+/*Chrome animation for "your broward county tutor"*/
+@-webkit-keyframes fadeIt {
+	 0%   { opacity: 0;
+         visibility: visible;
+        }
+
+  100% { opacity: 1;
+         visibility: visible;
+  }
+	
+		
+}
+
+
+/*firefox animation for "your broward county tutor"*/
+@-moz-keyframes fadeIt {
+	 0%   { opacity: 0;
+         visibility: visible;
+        }
+
+  100% { opacity: 1;
+         visibility: visible;
+  }
+	
+		
+}
+
+
+
+/*Class to add to fade out text */
+.FadeOut {
+	animation: fadeOut .5s;
+	animation-fill-mode: forwards;
+	
+}
+
+
+
+@keyframes fadeOut {
+  0%   { opacity: 1;
+         visibility: visible;
+        }
+
+  100% { opacity: 0;
+         visibility: hidden;
+  }
+}
+
+.row {
+	position: relative;
+	z-index: 10;
+}
+
+/*drop down on menu click */
+#menuBarDropDown {
+	position: absolute;
+	right: 3%;
+	overflow: auto;
+	width: 200px;
+	height: auto;
+	border: solid black;
+	background-color: white;
+	display: block;
+
+	z-index: 20;
+	display: none;
+	
+
+}
+
 
 
 
 /*big box on left side */
 #BigBoxLeft {
 	height: 62vw;
-	background-color: green;
-	margin-left: 50px;
+	margin-left: 5%;
 	float: left;
-	 background-image: url("studying3.jpg");
-	 background-size: cover;
+	background-image: url("studying3.jpg");
+	background-size: cover;
+	position: relative;
+
+	
+	/*
 	   flex-grow: 1;
-  transition: all 400ms ease;
-	 	 
+     transition: all 400ms ease;
+	 */
+		 	 
 }
+
+
+
+/*big box on left side */
+#BigBoxLeft:hover {
+    box-shadow: 0 0 15px #FFDC00;
+	/*
+	   flex-grow: 1;
+     transition: all 400ms ease;
+	 */
+		 	 
+}
+
+
+#FindOut:hover {
+	color: #FFDC00;
+}
+
+
 
 /*class used on BigBoxLeft for toggling height, makes it smaller */
 #BigBoxLeft.contracted {
@@ -94,16 +272,67 @@ body {
  	/*height: 800px;*/
 	height: 62vw;
 
+
+	
+
 }
+
+/*Message that appears inside photo */
+#BigBoxMessage {
+	height: auto;
+	width: 80%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	margin: 0 auto;
+	margin-top: 5%;
+	animation: fadeInMessage 2s;
+	animation-fill-mode: forwards;
+	color: white;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+
+
+
+@keyframes fadeInMessage {
+	0%   { opacity: 0;
+         visibility: hidden;
+       }
+
+  100% { opacity: 1;
+         visibility: visible;
+  }
+	
+	
+}
+
+
+
 
 .SmallBoxRight {
 	/*height: 385px;*/
 	height: 30vw;
-	background-color: red;
+
 	vertical-align: top;
 	margin: 0 auto 2vw;
 	
+	overflow: auto;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	
+	
 }
+
+.SmallBoxRight:hover {
+	
+	box-shadow: 0 0 15px #0074D9;
+	
+	
+}
+
+
+
 
 /*text in small box right */
 .text {
@@ -112,25 +341,156 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	height: auto;
-    
 	color: white;
 	text-align: center;
 	padding-top: 35%;
+	cursor: pointer;
+	
 	
 }
 
+/*fade in class added on load to text in small boxes */
+.fadeInSmall {
+	animation: fadeIt 5s;
+	-webkit-animation: fadeIt 5s;
+	-moz-animation:  fadeIt 3s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+}
 
+/*div container of my picture */
 #pierPic {
 	 background-image: url("pierpic.jpg");
 	 background-size: cover;
+	
 	 	
 }
 
+#pierPic:hover { 
+
+	box-shadow: 0 0 15px #0074D9;
+}
+
+#pierPic .text a:hover{
+	color: #0074D9;
+}
+
+#contactPic a:hover {
+	color: #0074D9;
+}
+
+
+#close:hover {
+	cursor: pointer;
+}
+
+/*Message that appears in pier box on click */
+#SmallBoxMessage {
+	height: auto;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	color: white;
+	animation: fadeInMessage 2s;
+	animation-fill-mode: forwards;
+	margin-top: 10%;
+	cursor: pointer;
+}
+
+
+#contactPic {
+	background-image: url("Broward-County.jpg");
+	 background-size: cover;
+	 position: relative;
+	
+	
+}
+
+#SmallBoxContactMessage {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	left: 0;
+	display: none;
+	
+	animation: fadeInMessage 2s;
+	animation-fill-mode: forwards;
+	
+}
+
+
+
+
+
+#theForm {
+	border: solid black;
+	color: white;	
+	height: 100%;
+}
+
+#theForm input, textarea{
+	font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
+}
+
+/*close message on form */
+#close {
+	float: right;
+}
+
+/*Contact me heading on form */
+#ContactMe {
+	margin-bottom: 0;
+	
+}
+
+/*name and email in form */
+.nameEmail {
+	width: 75%;
+}
+
+/*input box for the subject */
+#subject {
+	width: 100%;
+	height: 15%;
+}
+
+/*input box for the message */
+#message {
+	width: 100%;
+	height: 30%;
+}
+
+#submitButton {
+	cursor: pointer;
+}
+
+
+/*Footer Area */
+#bottomBar {
+	height: 100px;
+	background-color: #0074D9;
+	
+	margin-top: 50px;
+	color: white;
+	
+	
+}
+
+
+
+
 @media only screen and (max-width: 1200px) {
 	/*other text at the top of the screen */
+	/*
 	.top-text {
 		margin-right: 5%;
 	
+	}
+	*/
+	#SmallBoxMessage {
+		margin-top: 0;
 	}
 	
 	
@@ -140,14 +500,53 @@ body {
 
 
 @media only screen and (max-width: 1100px) {
+	/*Message that appears inside photo */
+	#BigBoxMessage {
+		font-size: 20px;
+	}
 	/*other text at the top of the screen */
+	/*
 	.top-text {
 		margin-right: 2%;
+
+	}
+	*/
+		
+}
+
+
+@media only screen and (max-width: 1040px) {
+	.top-text {
+		display: none;
+	}
 	
+	/*container for menu bar */
+	#menuBarContainer {
+		
+		display: inline-block;
+		float: right;
+		margin-right: 3%;
+		margin-top: 10px;
+		cursor: pointer;
 	}
 	
 	
+	#title-hidden-container {
+		display: inline-block;
+		height: auto;
+		width: 400px;
+		position: absolute;
+		font-size: 25px;
+		left: 30%;
+		margin-top: 10px;
+		
 	
+	}
+	
+	#title {
+		display: none;
+			
+	}
 	
 }
 
@@ -155,9 +554,29 @@ body {
 @media only screen and (max-width: 1000px) {
 	#title {
 		font-size: 27px;
-		
-		
+			
 	}
+	
+	#theForm input, textarea{
+		font-size: 12px;
+}
+	
+	/*input box for the subject */
+	#subject {
+		font-size: 12px;
+	}
+
+	/*input box for the message */
+	#message {
+		font-size: 12px;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -166,15 +585,22 @@ body {
 
 @media only screen and (max-width: 950px) {
 	
+	.topBar{
+		text-align: none !important;
+	}
+	
 	/*hidden title*/
+	
 	#title-hidden-container {
-		display: block;
+		display: inline-block;
 		height: auto;
 		width: 400px;
-		
-		margin: 0 auto;
-		text-align: center;
+		position: absolute;
 		font-size: 25px;
+		left: 30%;
+		margin-top: 10px;
+		
+	
 	}
 	
 	#title-hidden {
@@ -186,10 +612,13 @@ body {
 
 	
 	/*box containing page title*/
+	
 	#title {
 		display: none;
 			
 	}
+	
+	
 	
 	#nav-links-container {
 		width: 80%;
@@ -201,44 +630,122 @@ body {
 	
 	
 	/*other text at the top of the screen */
+	
 	.top-text {
 		margin-right: 10%;
 		margin-top: 0;
-		
-	}
-	
-	/*first top link */
-	#first {
-	   margin-left: 20%;
+		display: none;
+			
 	}
 	
 	
+	
+	
+
+	
+/*Message that appears inside photo */
+	#BigBoxMessage {
+		font-size: 15px;
+	}
+	
+
 	
 	
 }
 
 
-@media only screen and (max-width: 700px) {
-	.container-fluid {
+@media only screen and (max-width: 760px) {
+	
+	#BigBoxLeft {
+		/*
+		margin-left: 20px;
+		margin-right: 20px;
+		*/
+		float: none;
+		height:300px;
+		margin-left: 10px;
+		margin-right: 10px;
+		overflow: auto;
+		
+	}
+	
+	#BigBoxRightContainer {
 		height: auto;
-		font-family: Monospace821BT-Roman,Roboto Mono,monospace !important;
 	}
 	
-	/*hidden title*/
-	#title-hidden-container {
-		width: 100%;
-		word-wrap: break-word;
-		line-height: 80%;
+	/*both small boxes on right */
+	.SmallBoxRight {
+		margin-top: 20px; 
+		height: 400px;
+		/*
+		margin-right: 10px !important;
+		margin-left: 10px !important;
+		*/
+		
 	}
 	
-	/*other text at the top of the screen */
-	.top-text {
-		display: block; 
+	
+	/*Message within small box */
+	#SmallBoxMessage {
+		margin-top: 5% !important;
+		width: 80%;
 		margin: 0 auto;
-		text-align: center;
-		margin-right: 0;
 	}
 	
+	
+	#SmallBoxContactMessage {
+	height: 100%;
+	width: 80%;
+	position: relative;
+	margin: 0 auto;
+
+	
+	
+	}
+
+
+	
+	
+	.text {
+			font-size: 30px;
+			padding-top: 160px;
+				
+		}
+	
+	
+}
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+	
+
+	/*responsive title*/
+	#title-hidden-container {
+		font-size: 25px;
+		left: 5%;
+		
+	}
+	
+	/*container for menu Bar */
+	#menuBarContainer {
+		display: inline-block;
+		margin-right: 0 !important;
+	
+	}
+	
+	/*3 bar menu thing */
+	.menuBar {
+		width: 25px;
+		height: 3px;
+		background-color: black;
+		margin: 6px 0;
+		
+	}
+	
+
 	/*first top link */
 	#first {
 	   margin-left: 0;
@@ -249,40 +756,184 @@ body {
 	#Broward {
 		font-size: 20px;
 		margin-top: 40%;
-		
-	
 	}
+	
+	
+	
+	#theForm input, textarea{
+		font-size: 14px;
+	}
+	
+	/*input box for the subject */
+	#subject {
+		font-size: 14px;
+	}
+
+	/*input box for the message */
+	#message {
+		font-size: 14px;
+	}
+	
+	
+	/*Your broward county tutor*/
+	.Broward {
+		font-size: 20px;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;    
+		color: white;
+		text-align: center;
+		padding-top: 100px;
+
+		}
+		
+		
+		.text {
+			font-size: 25px;
+			padding-top: 125px;
+				
+		}	
+
+
+	
+	
+	
+	
+
 
 }
 
 
 @media only screen and (max-width: 610px) {
-	#BigBoxLeft {
-		margin-left: 7%;
-		margin-right: 7%;
-		float: none;
-		height:400px;
-		
-		
+	
+	/*container for menu Bar */
+	#menuBarContainer {
+		display: inline-block;
+		margin-right: 0 !important;
+		margin-top: 20px;
+	
 	}
 	
+	/*responsive title*/
+	#title-hidden-container {
+		font-size: 20px;
+		left: 5%;
+	}
 	
+	/*big box on left */
+	#BigBoxLeft {
+		/*
+		margin-left: 20px;
+		margin-right: 20px;
+		*/
+		float: none;
+		height: 300px;
+				
+	}
+	
+	/*both small boxes on right */
 	.SmallBoxRight {
 		margin-top: 20px; 
-		height: 400px;
-		
+		height: 300px;
+		padding: 0 !important;
+		/*
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		*/
 	}
+	
+		
+	
+		
+
+
 	
 	
 }
 
 
 @media only screen and (max-width: 550px) {
+	.topBar {
+		height: 75px;
+	}
+	
+	/*responsive title*/
+	#title-hidden-container {
+		font-size: 20px;
+		left: 5%;
+		width: 200px;
+		
+	}
 	
 	#title {
 		font-size: 20px;
 		
 		
 	}
+	
+	/*Message that appears inside photo */
+	#BigBoxMessage {
+		
+		margin-top: 0;
+		
+		
+	}
+	
+	/*Message within small box */
+	#SmallBoxMessage {
+		margin-top: 0 !important;
+
+	}
+	
+	
+	
+}
+
+
+@media only screen and (max-width: 400px) {
+	
+	/*Message that appears inside photo */
+	#BigBoxMessage {
+		font-size: 15px;
+		width: 100%;
+		height: auto;
+		margin-top: 0;
+		
+		
+	}
+
+	/*Message within small box */
+	#SmallBoxMessage {
+			width: 100%;
+	}
+	
+	
+	#SmallBoxContactMessage {
+
+		width: 100%;
+	
+	}
+
+	
+	
+	/*big box on left */
+	#BigBoxLeft {
+		height: 300px;
+		/*
+		margin-left: 10px;
+		margin-right: 10px;
+		*/
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		
+		
+	}
+	
+	/*name and email in form */
+	.nameEmail {
+		width: 100%;
+	}
+	
+	
 	
 }

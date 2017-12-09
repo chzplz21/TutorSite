@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="TutorSite.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="tutorScripts.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
   </head>
@@ -13,59 +14,129 @@
   <body>
   
 		
-		 <div class="container-fluid">
+		 <div class=" container-fluid topBar">
 			<!--only visible on smaller size -->
-			<div id = "title-hidden-container">
-				<b>David Rothkopf Tutoring</b>
-			</div>
-		
+				
+				<div id = "title-hidden-container">
+					<b>David Rothkopf Tutoring</b>
+				</div>
+			
+			
 				<div class = "top-text" id = "first">
-					Home yo!
+					&#x2706; 954-261-2916
 				</div>
 				
-				<div class = "top-text">
-					Ph: 954-261-2916
-				</div>
+					<div id = "title">
+					   <b>David Rothkopf Tutoring</b>
+					</div>
 				
-				<div class = "top-text" id = "title">
-				   <b>David Rothkopf Tutoring</b>
-				</div>
+					<div class = "top-text" id = "last">
+						&#x2709; drothhello@gmail.com
+					</div>
 				
-				<div class = "top-text" id = "last">
-					Em: drothhello@gmail.com
+			
+				
+				<div id = "menuBarContainer" data-toggle="collapse" data-target="#menuBarDropDown">
+					<div class = "menuBar"></div>
+					<div class = "menuBar"></div>
+					<div class = "menuBar"></div>
 				</div>
+			
 			 
 		  </div>
 			
-		
-		  
-	
-	
-	
-	  
+			<div class = "container-fluid">
 			<div class = "row">
+					
+				<div id = "menuBarDropDown" class = "collapse">
+				 &#x2706; <br>
+				954-261-2916<br>
+				 &#x2709; <br>
+				drothhello@gmail.com
+				</div>
 				
-				<div class = "col-xs-12 col-sm-7" id = "BigBoxLeft">
-					<div onclick="myFunction()" class = "Broward">Broward County Private Tutoring!<br>
-							<u>Find Out More!</u>
+				<div class = "col-md-7" id = "BigBoxLeft">
+					<!--Hidden message shows up on click-->
+					<div id = "BigBoxMessage">
+					Hello! I am here to serve Broward County students and parents with one on one tutoring services. I love
+					engaging students and making learning an enjoyable experience. 
+					<br>
+					<br>
+					I am available to come to your home or to a location of your choosing. I tutor in both Math and English, Kindegarden through 
+					12th grade.
+					<br>
+					<br>
+					I charge $15 for a half hour or $30 per hour. Please give me a call at 954-261-2916  if you are interested in my services!
+					</div>
+				
+					<div class = "Broward">Broward County Private Tutoring!<br>
+							<div id = "FindOut"><u>Find Out More!</u>
+							</div>
 					</div>
 				</div>
 				
-				<div class = "col-xs-12 col-sm-4 " id = "BigBoxRightContainer">
-					<div class = "col-11 SmallBoxRight" id = "pierPic">
-					  <div class = "text">About Me</div>
+				
+				<div class = "col-md-4 " id = "BigBoxRightContainer">
+					<div class = "col-md-11 SmallBoxRight" id = "pierPic">
+					
+					  <div id = "SmallBoxMessage">
+					  I am a Broward County native and have a Bachelor's degree in Philosophy from the University of Central Florida.
+					  <br>
+					  <br>
+					  After graduating, I worked as a tutor in a program called City Year, where I helped 8th grade math students bring
+					  up their grades from F's to B's and above. Currently I work as substitute teacher in the Broward school system.
+					  <br>
+					  <br>	
+					  I get a lot of satisfaction from helping students and seeing them improve.
+					  </div>
+					  
+					  <div class = "text AboutText"><a>About Me</a></div>
 					</div>
 					
-					<div class = "col-11 SmallBoxRight">
-					
-				    </div>
+					<div class = "col-md-11 SmallBoxRight" id = "contactPic">
+					  
+					  <div id = "SmallBoxContactMessage">
+						
+						<form id = "theForm" method = "post" action="email.php">
+							 <p id = "close">Close</p>
+							 <p id = "ContactMe"> Contact Me! </p>
+							 
+							  Name:<br>
+							  <input type="text" id = "Name" class = "nameEmail" name="firstname" ><br>
+							  Email:<br>
+							  <input type="text" id = "email" class = "nameEmail" name="email" ><br>
+							  Subject:<br>
+							  <textarea type="text" id = "subject" name="subject" ></textarea><br>
+							  Message:<br>
+							  <textarea type="text" id = "message" name="message"></textarea><br>
+							 <input type="submit" onclick = "return SubmitFunction()" value = "Submit" id = "submitButton" >
+						</form>
+					  
+					 </div>
+					 
+					 
+					   
+					 <div class = "text ContactText"><a>Contact</a></div>
+				
+					</div>
 					
 				</div>
-			
+				
 			
 			</div>
-
+			</div>
 		
+			<div class = "container-fluid">
+				<div class = "row">
+					<div class = "col-md-12"  id = "bottomBar">
+						<p>Website Created By David Rothkopf</p>
+						<p>&copy 2017</p>
+						
+					</div>
+				</div>
+			</div>
+				
+				
 	
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -79,12 +150,94 @@
 
 <script>
 
-function myFunction() {
-	$('#BigBoxLeft').toggleClass('col-sm-4 col-sm-12');
-	$('#BigBoxLeft').toggleClass("contracted");
+
+$( document ).ready(function() {
+	
 	
 
-}
+	$(".Broward").addClass("fadeIn");
+	$(".text").addClass("fadeInSmall");
+	
+	$( "#BigBoxLeft" ).click(function() {
+		$(".Broward").toggle();
+		$(".Broward").removeClass("fadeIn");
+		
+		$("#BigBoxMessage").toggle();
+		
+	});
+	
+	
+	$( "#pierPic" ).click(function() {
+		
+		$(".AboutText").toggle();
+		$(".text").removeClass("fadeInSmall");
+		
+		$("#SmallBoxMessage").toggle();
+		
+			
+	});
+	
+	
+	$( ".ContactText" ).click(function() {
+		
+		$(".ContactText").hide();
+		$(".text").removeClass("fadeInSmall");
+		$("#SmallBoxContactMessage").show();
+			
+	});
+	
+		
+	$( "#close" ).click(function() {
+		
+		$("#SmallBoxContactMessage").hide();
+		$(".ContactText").show();
+		
+		//$(".ContactText").css("display", "block");
+			
+	});
+	
+	
+
+	
+});
+
+
+function SubmitFunction() {
+		var Name = document.getElementById("Name").value;
+		var Email = document.getElementById("email").value;
+		var Subject = document.getElementById("subject").value;
+		var Message = document.getElementById("message").value;
+		
+		
+		if (Name == "") {
+			alert("Please enter your name");
+			return false;
+		}
+		
+		else if (Email == "") {
+			alert("Please enter your email address");
+			return false;
+		}
+		
+		else if (Subject == "") {
+			alert("Please enter the subject");
+			return false;
+		}
+		
+		else if (Message == "") {
+			alert("Please enter a message");
+			return false;
+		}
+		
+		
+	
+		
+		
+		
+		
+		
+	}
+
 	
 
 </script>
