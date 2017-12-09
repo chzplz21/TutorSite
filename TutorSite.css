@@ -534,14 +534,17 @@ body {
 	#title-hidden-container {
 		display: inline-block;
 		height: auto;
-		width: 400px;
+		width: 500px;
 		position: absolute;
-		font-size: 25px;
-		left: 30%;
+		font-size: 30px;
+		left: 25%;
 		margin-top: 10px;
 		
 	
 	}
+	
+	
+
 	
 	#title {
 		display: none;
@@ -591,6 +594,7 @@ body {
 	
 	/*hidden title*/
 	
+	/*
 	#title-hidden-container {
 		display: inline-block;
 		height: auto;
@@ -599,10 +603,11 @@ body {
 		font-size: 25px;
 		left: 30%;
 		margin-top: 10px;
+		border: solid blue;
 		
 	
 	}
-	
+	*/
 	#title-hidden {
 		margin: 0 auto;
 		height: auto;
