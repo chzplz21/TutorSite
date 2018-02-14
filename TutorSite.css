@@ -232,7 +232,7 @@ body {
 	height: 62vw;
 	margin-left: 5%;
 	float: left;
-	background-image: url("studying3.jpg");
+	background-image: url("Images/studying3.jpg");
 	background-size: cover;
 	position: relative;
 
@@ -361,7 +361,7 @@ body {
 
 /*div container of my picture */
 #pierPic {
-	 background-image: url("pierpic.jpg");
+	 background-image: url("Images/pierpic.jpg");
 	 background-size: cover;
 	
 	 	
@@ -400,7 +400,7 @@ body {
 
 
 #contactPic {
-	background-image: url("Broward-County.jpg");
+	background-image: url("Images/Broward-County.jpg");
 	 background-size: cover;
 	 position: relative;
 	
